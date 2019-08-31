@@ -14,8 +14,8 @@ class Node
                 right=NULL;
                 parent=NULL;
                 }
-       	void setx(T val)
-       	    {x=val;}
+       	void setx(T val)                   // All the data for any node is encapsulated by declaring it private
+       	    {x=val;}                       // so, for accessing that data, we need to create some public functions
        	T getx()
        	    {return x;}
        	void setleft(Node<T>* d)
