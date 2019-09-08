@@ -118,13 +118,11 @@ public:
             if(temp->getleft()==NULL && temp->getright()==NULL){
                 if(temp==temp->getparent()->getleft()){
                     temp->getparent()->setleft(NULL);
-                    delete temp;
                     n--;
                     return 1;
                 }
                 else{
                     temp->getparent()->setright(NULL);
-                    delete temp;
                     n--;
                     return 1;
                 }
@@ -133,14 +131,12 @@ public:
                 if(temp==temp->getparent()->getleft()){
                     temp->getparent()->setleft(temp->getright());
                     temp->getright()->setparent(temp->getparent());
-                    delete temp;
                     n--;
                     return 1;
                 }
                 else{
                     temp->getparent()->setright(temp->getright());
                     temp->getright()->setparent(temp->getparent());
-                    delete temp;
                     n--;
                     return 1;
                 }
@@ -149,14 +145,12 @@ public:
                 if(temp==temp->getparent()->getleft()){
                     temp->getparent()->setleft(temp->getleft());
                     temp->getleft()->setparent(temp->getparent());
-                    delete temp;
                     n--;
                     return 1;
                 }
                 else{
                     temp->getparent()->setright(temp->getleft());
                     temp->getleft()->setparent(temp->getparent());
-                    delete temp;
                     n--;
                     return 1;
                 }
@@ -170,8 +164,6 @@ public:
                     }
                     temp->setx(m->getx());
                     m->getparent()->setleft(NULL);
-                    delete m;
-                    delete temp;
                     n--;
                     return 1;       
             }
