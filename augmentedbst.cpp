@@ -137,7 +137,7 @@ public:
 
 
                     temp->getparent()->setleft(NULL);
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -149,7 +149,7 @@ public:
                                 }
                     root->setsize(root->getsize()-1);
                     temp->getparent()->setright(NULL);
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -164,7 +164,7 @@ public:
                     root->setsize(root->getsize()-1);
                     temp->getparent()->setleft(temp->getright());
                     temp->getright()->setparent(temp->getparent());
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -177,7 +177,7 @@ public:
                     root->setsize(root->getsize()-1);
                     temp->getparent()->setright(temp->getright());
                     temp->getright()->setparent(temp->getparent());
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -192,7 +192,7 @@ public:
                     root->setsize(root->getsize()-1);
                     temp->getparent()->setleft(temp->getleft());
                     temp->getleft()->setparent(temp->getparent());
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -205,7 +205,7 @@ public:
                     root->setsize(root->getsize()-1);
                     temp->getparent()->setright(temp->getleft());
                     temp->getleft()->setparent(temp->getparent());
-                    delete temp;
+                    //delete temp;
                     n--;
                     return 1;
                 }
@@ -225,8 +225,8 @@ public:
                                 }
                     root->setsize(root->getsize()-1);
                     m->getparent()->setleft(NULL);
-                    delete m;
-                    delete temp;
+                    //delete m;
+                    //delete temp;
                     n--;
                     return 1;       
             }
